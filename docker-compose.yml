@@ -1,0 +1,47 @@
+version: "2"
+services:
+  api_common:
+    image: vietplays/centos-nginx-php7
+    volumes:
+      - .:/app
+    environment:
+      - WEBROOT=/app
+  api:
+    extends:
+      service: api_common
+    depends_on:
+      - db
+      - dbtest
+    ports:
+      - 8002:8080
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8012:80
+    depends_on:
+      - db
+      - dbtest
+    environment:
+      - PMA_HOSTS=db,dbtest
+      - PMA_USER=dbuser
+      - PMA_PASSWORD=123
+  db:
+    image: mariadb:5
+    volumes:
+      - .:/app
+    ports:
+      - 8013:3306
+    environment:
+      - MYSQL_DATABASE=testt
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=123
+      - MYSQL_ROOT_PASSWORD=root
+  dbtest:
+    image: mariadb:5
+    ports:
+      - 8014:3306
+    environment:
+      - MYSQL_DATABASE=testt_test
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=123
+      - MYSQL_ROOT_PASSWORD=root

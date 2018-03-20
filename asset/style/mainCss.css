@@ -1,0 +1,84 @@
+body{ margin: 0; padding: 0; }
+#form_login, #form_create{
+	border: 1px solid #ededed;
+	padding: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+    box-shadow: 4px 4px 20px;
+}
+#form_create{
+	/*border: 1px solid #ededed;*/
+	padding: 20px;
+	/*margin-top: 30px;*/
+	margin-bottom: 30px;
+	/*background: rgba(255,255,255,0);*/
+}
+#formLogin.col-xs-6.col-sm-4{
+	float: none;
+}
+#formLogin form .alert-style{
+	margin-bottom: 0;
+	padding: 0px;
+	text-align: center;
+	background-color: transparent;
+	border-color: transparent;
+}
+form select.formSelect{
+	height: 34px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+form button.btn-right{
+	float: right;
+	text-decoration: none;
+}
+form button.btn-right a{
+	text-decoration: none;
+}
+.box-style{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+td form#formUser{
+	display: inline!important;
+}
+form .alert-success, form .alert-danger {
+	text-align: center;
+}
+#page-wrapper .page-header{
+	margin: 15px 0 10px;
+}
+#page-wrapper .page-header .alert{
+	margin: 0 0 5px 0;
+	padding: 5px 20px;
+}
+form .btn_style_right{
+	float: right;
+}
+.modal_style_title{
+	text-align: center;
+}
+.modal_style_image{
+	margin-bottom: 10px;
+}
+.modal_style_image img{
+	margin: 0 auto;
+	display: block;
+    width: 60px;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+}
+#form_edit{
+	margin-top: 30px;
+	margin-bottom: 30px;
+    box-shadow: 4px 10px 25px;
+    padding-bottom: 20px ;
+}
+.td_middle{
+	text-align: center;
+}
+.fa-red{
+	color: red;
+}
