@@ -12,6 +12,7 @@ class User extends CI_Controller {
 		if ($this->user_model->checkLoggedIn() == TRUE) {
 			// if ($this->session->userdata('user_level') ==1) {
 				$data['result'] = $this->user_model->getUserList();
+				// abc
 			// }
 			// else {
 				// $data['result'] = $this->user_model->getUserRow();
